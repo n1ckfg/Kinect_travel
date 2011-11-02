@@ -21,7 +21,7 @@ void setup() {
 
 void draw() {
   background(135,135,155);
-  bob.update();
+    bob.update();
   mary.update();
   louise.update();
   if(!firstRun){
@@ -35,6 +35,12 @@ void draw() {
   textFont(degFont,degFontSize);
   text("?",width/2,(height/2)-degFontSize);
   }
+}
+
+void mouseReleased(){
+    bob.degKinect();
+  mary.degKinect();
+  louise.degKinect();
 }
 
 class Button {
@@ -64,7 +70,7 @@ class Button {
   void update() {
     checkButton();
     drawButton();
-    degKinect();
+    //degKinect();
   }
 
   void degKinect() {
